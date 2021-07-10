@@ -1,0 +1,15 @@
+com\automation\libraries\ObjectStorageMap.class
+com\automation\pages\MainPage.class
+com\automation\libraries\AutomationLibrary$Browser.class
+com\automation\tests\TshirtPageTest.class
+com\automation\libraries\AutomationBase.class
+com\automation\libraries\EmailManager$1.class
+com\automation\libraries\ListenerClass.class
+com\automation\libraries\ClassFromShekur.class
+com\automation\libraries\ProvideExcelData.class
+com\automation\libraries\AutomationLibrary$1.class
+com\automation\libraries\AutomationLibrary.class
+com\automation\pages\TshirtPage.class
+com\automation\tests\MainPageTests.class
+com\automation\libraries\EmailManager.class
+com\automation\libraries\ManageJP.class
