@@ -29,5 +29,14 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/renaa/.m2/repository/io/github/bonigarcia/webdrivermanager/4.1.0/webdrivermanager-4.1.0.jar" sourcepath="C:/Users/renaa/.m2/repository/io/github/bonigarcia/webdrivermanager/4.1.0/webdrivermanager-4.1.0-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="io.github.bonigarcia"/>
+			<attribute name="maven.artifactId" value="webdrivermanager"/>
+			<attribute name="maven.version" value="4.1.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

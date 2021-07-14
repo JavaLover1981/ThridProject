@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.automation.libraries.AutomationBase;
-import com.automation.libraries.ManageJP;
 import com.automation.libraries.ObjectStorageMap;
 
 public class MainPage extends AutomationBase {
@@ -17,7 +16,8 @@ public class MainPage extends AutomationBase {
 
 	public MainPage gotoMainPage() {
 		try {
-			driver.get("http://automationpractice.com/index.php");
+			//driver.get("http://automationpractice.com/index.php");
+			driver.get("url");
 			logger.info("My Store website URL printed");
 			String actualWebsiteTitle = driver.getTitle();
 			logger.info("Current website title is: " + actualWebsiteTitle);
@@ -70,5 +70,22 @@ public class MainPage extends AutomationBase {
 		//xpath: //h1[contains(text(),'Short')]
 		//xpath: //h1[text()='Faded Short Sleeve T-shirts']
 		//-->css: h1[itemprop='name']
+	}
+
+	public MainPage clickCart() throws Exception {
+		autoLibrary.clickElement(osMap.getLocator("clickCart"));
+		return this;
+		
+	}
+
+	public MainPage flyOver() {
+		WebElement diving = driver.findElement(By.id("Diving"));
+		autoLibrary.enterTxt(diving, "Ekky");
+		return this;
+	}
+
+	public MainPage diveInto() {
+		autoLibrary.enterTxt(By.id("Diving"), "Ekky");
+		return this;
 	}
 }

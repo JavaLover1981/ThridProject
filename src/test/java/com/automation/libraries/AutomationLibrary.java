@@ -36,8 +36,9 @@ import org.openqa.selenium.safari.SafariOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.google.common.io.Files;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * This class have all Selenium/WebDriver related wrapper methods and features.
@@ -192,7 +193,8 @@ public class AutomationLibrary {
 	 */
 	public WebDriver startChromeBrowser() {
 		try {
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/browserDrivers/chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
+			//System.setProperty("webdriver.chrome.driver", "src/test/resources/browserDrivers/chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
@@ -214,11 +216,13 @@ public class AutomationLibrary {
 	private WebDriver startFirefoxBrowser() {
 		try {
 			logger.debug("make sure, use firefox system variable and path");
-			System.setProperty("webdriver.gecko.driver", "src/test/resources/browserDrivers/geckodriver.exe");
+		//	System.setProperty("webdriver.gecko.driver", "src/test/resources/browserDrivers/geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 			driver.manage().window().maximize();
+			isBrowserTypeFirefox=true;
 		} catch (Exception e) {
 			logger.error("Error: ", e);
 			assertTrue(false);

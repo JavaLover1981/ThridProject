@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automation.tests.TshirtPageTest">
+      <class name="com.automation.tests.MainPageTests">
         <methods>
           <include name="setup"/>
           <include name="beforeAllTests"/>
-          <include name="chooseT_Shirt"/>
+          <include name="shoppingTest"/>
           <include name="close"/>
           <include name="afterAllTests"/>
         </methods>
-      </class> <!-- com.automation.tests.TshirtPageTest -->
+      </class> <!-- com.automation.tests.MainPageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
